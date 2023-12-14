@@ -18,10 +18,10 @@ class Program
 
             while(rev> 0)
             {
-                int revRem = rev % 10;
+                int revRep = rev % 10;
                 rev = rev / 10;
 
-                switch (revRem)
+                switch (revRep)
                 {
                     case 0:
                         num+= "Zero";
