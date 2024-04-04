@@ -1,0 +1,61 @@
+//C# Program to convert Number to Word.
+using System;
+class Program
+{
+    static void Main(string []args)
+    {
+        Console.WriteLine("Enter the Number");
+        int num =  Convert.ToInt32(Console.ReadLine());
+        int rev=0, rem=0;
+        while(num>0)
+        {
+                rem = num%10;
+                rev = (rev*10)+rem;
+                num = num/10;
+        }
+        string word="";
+        while(rev>0)
+        {
+            rem = rev%10;
+            rev = rev/10;
+            
+            switch(rem)
+            {
+                case 0:
+                        word+="Zero ";
+                        break;
+                case 1:
+                        word+="One ";
+                        break;
+                case 2:
+                        word+="Two ";
+                        break;
+                case 3:
+                        word+="Three ";
+                        break;
+                case 4:
+                        word+="Four ";
+                        break;
+                case 5:
+                        word+="Five ";
+                        break;
+                case 6:
+                        word+="Six ";
+                        break;
+                case 7:
+                        word+="Seven ";
+                        break;
+                case 8:
+                        word+="Eight ";
+                        break;
+                case 9:
+                        word+="Nine ";
+                        break;
+                default:
+                        Console.WriteLine("Enter the valid Number");
+                        break;
+            }
+        }
+        Console.WriteLine(word);
+    }
+}
